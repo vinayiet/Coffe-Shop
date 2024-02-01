@@ -4,9 +4,13 @@ import cors from 'cors';
 const app = express();
 // Port created to run the server on
 const port = 3000;
-
+app.use(cors());
 
 app.get('/', (req, res) => {
+    res.send("Hello this is the backend");
+});
+
+app.get('/api/jokes', (req, res) => {
     res.send(jokes);
 });
 const jokes = [
