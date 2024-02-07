@@ -1,0 +1,39 @@
+
+.hero-section {
+    position: relative;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Added to make the image responsive */
+}
+
+.hero-section h1 {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    color: coffee;
+    text-align: right;
+    font-family: "Attractive Font", sans-serif;
+}
+
+.hero-section h2 {
+    position: absolute;
+    top: 60px;
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+    right: 20px;
+    text-align: right;
+    font-family: "Attractive Font", sans-serif;
+}
+
+.hero-section button {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    text-align: right;
+    font-family: "Attractive Font", sans-serif;
+}

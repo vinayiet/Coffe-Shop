@@ -1,26 +1,19 @@
 import express from 'express';
 import cors from 'cors';
+import connectDB from './db/db.js';
+
 // Create express app
 const app = express();
+
 // Port created to run the server on
 const port = 3000;
+
 app.use(cors());
+connectDB();
 
 app.get('/', (req, res) => {
-    res.send("Hello this is the backend");
+    res.send("Hello, this is the backend");
 });
-
-app.get('/api/jokes', (req, res) => {
-    res.send(jokes);
-});
-const jokes = [
-    "Why don't scientists trust atoms? Because they make up everything!",
-    "I'm reading a book about anti-gravity. It's impossible to put down!",
-    "Why don't skeletons fight each other? They don't have the guts!",
-    "Why did the scarecrow win an award? Because he was outstanding in his field!",
-    "Why did the bicycle fall over? Because it was two-tired!"
-];
-
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
